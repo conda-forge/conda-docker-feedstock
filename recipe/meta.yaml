@@ -1,5 +1,5 @@
 {% set name = "conda-docker" %}
-{% set version = "0.0.2" %}
+{% set version = "0.0.3" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/regro/conda-docker/releases/download/{{ version }}/conda-docker-{{ version }}.tar.gz
-  sha256: 800eabff3a75b9cdf4f860c6db47b7b442c882b874048acff8e502258332ae83
+  sha256: 17552de8a4c17372e79d660d23bdb7a992695d5202fe8975c886b1ebad37c574
 
 build:
   noarch: python
