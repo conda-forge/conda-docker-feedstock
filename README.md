@@ -5,9 +5,11 @@ Home: https://github.com/regro/conda-docker
 
 Package license: BSD-3-Clause
 
-Feedstock license: BSD 3-Clause
+Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/conda-docker-feedstock/blob/master/LICENSE.txt)
 
 Summary: Create minimal docker images from conda environments
+
+Development: https://github.com/regro/conda-docker
 
 Conda Docker is an extension to the docker concept by having declarative
 environments that are associated with docker images. In addition this tool
