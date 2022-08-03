@@ -1,5 +1,5 @@
 {% set name = "conda-docker" %}
-{% set version = "0.1.0" %}
+{% set version = "0.1.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://github.com/conda-incubator/conda-docker/archive/refs/tags/{{ version }}.tar.gz
-  sha256: e903a618f3b2ff009910a3753a7a293d1863083909f794a7788f1f6ed9e4df0a
+  sha256: c7473bdc4368f23e6e4c2b3ea37c492ef9d88ee365616c4180f30ac898e82622
 
 build:
   noarch: python
