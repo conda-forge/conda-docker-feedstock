@@ -1,13 +1,13 @@
 {% set name = "conda-docker" %}
-{% set version = "0.0.3" %}
+{% set version = "0.1.0" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://github.com/regro/conda-docker/releases/download/{{ version }}/conda-docker-{{ version }}.tar.gz
-  sha256: 17552de8a4c17372e79d660d23bdb7a992695d5202fe8975c886b1ebad37c574
+  url: https://github.com/conda-incubator/conda-docker/archive/refs/tags/{{ version }}.tar.gz
+  sha256: e903a618f3b2ff009910a3753a7a293d1863083909f794a7788f1f6ed9e4df0a
 
 build:
   noarch: python
@@ -18,10 +18,11 @@ build:
 
 requirements:
   host:
-    - python
+    - python >=3.7
     - pip
   run:
-    - python
+    - python >=3.7
+    - python-docker
     - conda
     - mamba
     - conda-standalone
@@ -34,7 +35,7 @@ test:
     - conda-docker --help
 
 about:
-  home: https://github.com/regro/conda-docker
+  home: https://github.com/conda-incubator/conda-docker
   license: BSD-3-Clause
   license_family: BSD
   license_file: LICENSE
@@ -44,7 +45,7 @@ about:
     environments that are associated with docker images. In addition this tool
     does not require docker to build images. Thus allowing for interesting
     caching behavior and tricks that docker would not normally allow.
-  dev_url: https://github.com/regro/conda-docker
+  dev_url: https://github.com/conda-incubator/conda-docker
 
 extra:
   recipe-maintainers:
