@@ -6,7 +6,7 @@ package:
   version: {{ version }}
 
 source:
-  url: https://github.com/regro/conda-docker/releases/download/{{ version }}/conda-docker-{{ version }}.tar.gz
+  url: https://github.com/conda-incubator/conda-docker/archive/refs/tags/{{ version }}.tar.gz
   sha256: e903a618f3b2ff009910a3753a7a293d1863083909f794a7788f1f6ed9e4df0a
 
 build:
