@@ -11,17 +11,17 @@ source:
 
 build:
   noarch: python
-  number: 0
+  number: 1
   script: {{ PYTHON }} -m pip install . -vv
   entry_points:
     - conda-docker=conda_docker.cli:main
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - python-docker
     - conda
     - mamba
@@ -29,6 +29,8 @@ requirements:
     - fakechroot
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - conda_docker
   commands:
